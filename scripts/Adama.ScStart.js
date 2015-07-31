@@ -43,8 +43,12 @@
         btnStart.press = function(){
             txtStart.y = (Adama.e.canvas.height / 2) + 59;
         };
-        btnStart.release = function(){
+        btnStart.release  = function(){
             txtStart.y = (Adama.e.canvas.height / 2) + 55;
+            window.setTimeout(function(){ 
+                Adama.scStart.spr.visible = false;
+                Adama.scBattle.init(); 
+            }, 1000);
         };
         Adama.scStart.spr.addChild(btnStart);
         txtStart.x = (Adama.e.canvas.width / 2) - 90;
